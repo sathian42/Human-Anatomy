@@ -36,7 +36,6 @@ html {
     text-transform: uppercase;
     padding-bottom: 2px;
     opacity: 0;
-    -webkit-text-stroke: 0.5px black;
     text-shadow: 0 0 10px rgba(255, 111, 0, 0.6);
     transform: translateY(50px);
 }
