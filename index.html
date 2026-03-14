@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+        const elements = document.querySelectorAll(".small-header, .para");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                } else {
+                    entry.target.classList.remove("show");
+                }
+            });
+        }, {
+            threshold: 1
+        });
+        elements.forEach(el => observer.observe(el));
+    </script>
+
+</head>
+
+<body>
+    <div class="aurora">
+        <div class="parallax" id="lander" style="background-image: url('./asset/empty2.png ');">
+            <div class="caption">
+                <h2 class="small-header">Human Anatomy and Physiology</h2>
+            </div>
+        </div>
+
+        <div class="parallax" style="background-image: url('./asset/skleton.png');">
+            <div class="caption">
+                <h2 class="small-header">Skeletal system</h2>
+                <div class="para">
+                    <p>
+                        The skeletal system is made up of bones that give the body shape and support. It helps the body
+                        stand, move, and protects important organs like the brain and heart. The bones also work with
+                        muscles to help us move and make new blood cells inside the bone marrow. Humans have about 206
+                        bones in their body.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax" style="background-image: url('./asset/neural.png');">
+            <div class="caption">
+                <h2 class="small-header">Nervous system</h2>
+                <div class="para">
+                    <p>
+                        The nervous system controls and coordinates the activities of the body. It includes the brain,
+                        spinal cord, and nerves. It sends signals between different parts of the body, helping us think,
+                        feel, move, and respond to our surroundings.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax" style="background-image: url('./asset/bloodvessels.png');">
+            <div class="caption">
+                <h2 class="small-header">Cardiovascular system</h2>
+                <div class="para">
+                    <p>
+                        The cardiovascular system is responsible for transporting blood throughout the body. It consists
+                        of the heart, blood, and a network of blood vessels such as arteries, veins, and capillaries.
+                        The heart pumps oxygen-rich blood to different parts of the body, delivering nutrients and
+                        oxygen to cells. It also carries carbon dioxide and other wastes away from the cells so they can
+                        be removed from the body. This system helps keep all organs working properly.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax" style="background-image: url('./asset/digestive.png');">
+            <div class="caption">
+                <h2 class="small-header">Digestive system</h2>
+                <div class="para">
+                    <p>
+                        The digestive system helps the body break down food into nutrients that the body can use for
+                        energy, growth, and repair. It includes organs such as the mouth, stomach, intestines, liver,
+                        and pancreas. Food is digested and the useful nutrients are absorbed into the bloodstream, while
+                        the remaining waste is removed from the body.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax" style="background-image: url('./asset/respirational.png');">
+            <div class="caption">
+                <h2 class="small-header">Respiratory system</h2>
+                <div class="para">
+                    <p>
+                        The respiratory system helps the body breathe and exchange gases. It includes organs such as the
+                        nose, trachea, and lungs. When we inhale, oxygen enters the lungs and moves into the bloodstream
+                        to supply energy to the body. When we exhale, carbon dioxide, a waste gas, is removed from the
+                        body. This system helps keep our cells alive and working properly.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax" style="background-image: url('./asset/organal.png');">
+            <div class="caption">
+                <h2 class="small-header">Excretory System</h2>
+                <div class="para">
+                    <p>
+                        The excretory system helps remove waste and harmful substances from the body. It includes organs
+                        such as the kidneys, ureters, bladder, and urethra. The kidneys filter waste and extra water
+                        from the blood to produce urine. This system helps maintain the body’s balance of fluids, salts,
+                        and other substances, keeping the body healthy.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax" style="background-image: url('./asset/muscular.png');">
+            <div class="caption">
+                <h2 class="small-header">Muscular system</h2>
+                <div class="para">
+                    <p>
+                        The muscular system is made up of muscles that help the body move and maintain posture. Muscles
+                        work with the bones to allow actions like walking, running, and lifting. This system also helps
+                        move substances inside the body, such as blood and food, and produces heat to keep the body
+                        warm.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax" style="background-image: url('./asset/skin.png ');">
+            <div class="caption">
+                <h2 class="small-header">Integumentary system</h2>
+                <div class="para">
+                    <p>
+                        The integumentary system is the body’s outer covering. It includes the skin, hair, and nails.
+                        This system protects the body from injury, germs, and harmful substances. It also helps control
+                        body temperature and allows us to feel sensations like touch, heat, and cold.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax" style="background-image: url('./asset/human.png ');">
+            <div class="caption">
+                <h2 class="small-header">Human Anotomy</h2>
+                <div class="para">
+                    <p>
+                        Human anatomy helps us understand how the different parts of the body are structured and how
+                        they work together to keep us alive and healthy. Each organ system, such as the skeletal,
+                        muscular, nervous, and circulatory systems, has an important role in maintaining the body’s
+                        functions. By learning about human anatomy, we can better appreciate how the body works and
+                        understand the importance of taking care of our health.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax" style="background-image: url('./asset/empty2.png ');">
+            <div class="caption">
+                <h2 class="small-header"></h2>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

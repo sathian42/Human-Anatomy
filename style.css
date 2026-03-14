@@ -1,0 +1,169 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#lander>.caption {
+
+    justify-content: center;
+}
+
+.parallax {
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.small-header {
+    color: #FF6F00;
+    font-size: 1.5rem;
+    text-align: center;
+    max-width: 250px;
+    text-transform: uppercase;
+    padding-bottom: 2px;
+    opacity: 0;
+    -webkit-text-stroke: 0.5px black;
+    text-shadow: 0 0 10px rgba(255, 111, 0, 0.6);
+    transform: translateY(50px);
+}
+
+.small-header.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.para {
+    max-width: 300px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    transform: translateY(50px);
+    text-align: justify;
+    letter-spacing: 0.3px;
+}
+
+
+.caption {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.small-header {
+    max-width: 250px;
+}
+
+
+
+
+.aurora {
+
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+    background: linear-gradient(120deg,
+            #000000,
+            #0C090A,
+            #040720,
+            #151B54,
+            #2E1A47);
+
+    background-size: 400% 400%, contain;
+    animation: auroraMove 15s ease infinite;
+}
+
+.small-header,
+.para {
+    opacity: 0;
+    transform: translateY(15px);
+
+
+    animation: reveal linear forwards;
+    animation-timeline: view();
+    animation-range: entry 45% cover 55%;
+}
+
+
+
+
+@media (max-width:768px) {
+
+    .caption {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .para {
+        text-align: center;
+    }
+
+    .parallax {
+        min-height: 100vh;
+        padding: auto;
+        background-size: cover;
+    }
+
+
+
+
+
+}
+
+
+@keyframes fadeScroll {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes auroraMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
